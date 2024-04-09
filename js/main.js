@@ -7,7 +7,7 @@ let isValid = true;
 
 function validEmail(email) {
   // Regular expression for validating email addresses
-  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
 }
 
