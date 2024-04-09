@@ -1,0 +1,260 @@
+/* ----CSS Reset---- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* -----Primary Colors----- */
+    --Red: hsl(0, 100%, 74%);
+    --Green: hsl(154, 59%, 51%);
+    /* -----Accent----- */
+    --Blue: hsl(248, 32%, 49%);
+    /* -----Neutral----- */
+    --Dark-Blue: hsl(249, 10%, 26%);
+    --Grayish-Blue: hsl(246, 25%, 77%);
+
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+    background: var(--Red) url("../images/bg-intro-desktop.png") center no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #f5f5f5;
+    /* opacity: 0.85; */
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 1rem 2.5rem;
+
+}
+
+.intro-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: last baseline;
+    align-items: center;
+    width: 50%;
+}
+
+.intro-section .main-heading {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.intro-section p {
+    font-weight: 400;
+    margin: 1rem 0;
+    padding: 0.75rem 0.2rem;
+}
+
+/* -------- */
+.signup-section {
+    margin: 2.5rem 1rem;
+    width: 50%;
+    min-height: 25rem;
+    display: flex;
+    flex-flow: column;
+    gap: 0.5rem;
+}
+
+/* trial section */
+.demo-section {
+    text-align: center;
+    border: 1px solid var(--Grayish-Blue);
+    border-radius: 5px;
+    background-color: var(--Blue);
+    padding: 1.25rem 1rem;
+    width: 100%;
+
+}
+
+.demo-section {
+    box-shadow: 2px 8px #8080807a;
+}
+
+/* form-section */
+.form-section {
+    background-color: #f5f5f5;
+    padding: 1.25rem 2.5rem;
+    padding-bottom: 3rem;
+    margin: 0.5rem 0;
+    border-radius: 10px;
+}
+
+.form-group {
+    margin: 1.75rem 0;
+
+}
+
+.form-group input {
+    display: inline-block;
+    width: 100%;
+    padding: 1rem 1.25rem;
+    font-size: 1.25rem;
+    border-radius: 5px;
+    border-width: 1px;
+
+}
+
+.form-group label input:focus {
+    border: 2px solid wheat;
+}
+
+.terms-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: var(--Dark-Blue);
+}
+
+.terms-section div {
+    width: 85%;
+    font-size: small;
+}
+
+.terms-section div span {
+    white-space: nowrap;
+}
+
+a:any-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.demo-wrapper span {
+    font-weight: 600;
+}
+
+.btn-discount {
+    display: block;
+    font-size: 1rem;
+    margin: 1rem 0;
+    padding: 1rem 0;
+    width: 100%;
+    border: 1px solid #333;
+    background-color: var(--Green);
+    border-radius: 5px;
+    color: inherit;
+    text-transform: uppercase;
+}
+
+.btn {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 2rem 0;
+    padding: 1rem 1.5rem;
+    width: 100%;
+    border: 1px solid #333;
+    background-color: var(--Green);
+    border-radius: 5px;
+    color: inherit;
+    text-transform: uppercase;
+}
+
+.btn:hover {
+    cursor: pointer;
+    opacity: 0.75;
+}
+
+/* Terms Section */
+.terms-section span a {
+    color: var(--Red);
+}
+
+.terms-section span a:hover {
+    text-decoration: underline;
+}
+
+/* error handling and msg section */
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.error-icon {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    display: none;
+
+}
+
+.error-msg {
+    position: absolute;
+    color: var(--Red);
+    top: 100%;
+    right: 0;
+    display: none;
+    padding: 0.25rem 0;
+
+}
+
+@media screen and (max-width:375px) {
+    main.container {
+        flex-flow: column wrap;
+    }
+
+    .intro-section {
+        width: 100%;
+        margin: 1rem auto;
+    }
+
+    .signup-section {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .btn {
+        font-size: 0.75rem;
+        padding: 1rem 0.75rem;
+
+    }
+}
+
+@media screen and (max-width:640px) {
+    .container {
+        flex-flow: row wrap;
+        margin: 0.75rem 1rem;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .intro-section {
+        width: 100%;
+        margin: 1rem auto;
+    }
+
+    .intro-section .main-heading {
+        font-size: 2.5rem;
+    }
+
+    .signup-section {
+        font-size: 1rem;
+        width: 100%;
+        margin: 1rem auto;
+    }
+
+    .btn {
+        font-size: 1rem;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:1440px) {
+    .container .signup-section {
+        font-size: 1rem;
+        min-width: fit-content;
+        margin: 1rem auto;
+    }
+}
